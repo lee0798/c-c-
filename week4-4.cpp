@@ -1,3 +1,5 @@
+//prefix ì‹ì„ ê³„ì‚°í•˜ëŠ” ì½”ë“œ 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -5,35 +7,35 @@
 #include <string.h>
 
 
-// Ãß°¡·Î Çì´õÆÄÀÏÀÌ ÇÊ¿äÇÑ °æ¿ì ÀÚÀ¯·Ó°Ô Ãß°¡ÇØµµ µË´Ï´Ù.
+// ì¶”ê°€ë¡œ í—¤ë”íŒŒì¼ì´ í•„ìš”í•œ ê²½ìš° ììœ ë¡­ê²Œ ì¶”ê°€í•´ë„ ë©ë‹ˆë‹¤.
 
 #define MAX_LEN   100
 
-// ½ºÅÃ ±¸Á¶Ã¼
+// ìŠ¤íƒ êµ¬ì¡°ì²´
 typedef struct {
 	double* arr;
 	int top;
 } Stack;
 
-// ½ºÅÃ ÃÊ±âÈ­ ÇÔ¼ö
+// ìŠ¤íƒ ì´ˆê¸°í™” í•¨ìˆ˜
 void initStack(Stack* pstack, int size)
 {
 	pstack->arr = (double*)malloc(size * sizeof(double));
 	pstack->top = -1;
 }
-// ½ºÅÃÀÌ ºñ¾îÀÖ´ÂÁö È®ÀÎÇÏ´Â ÇÔ¼ö
+// ìŠ¤íƒì´ ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸í•˜ëŠ” í•¨ìˆ˜
 int isEmpty(Stack* pstack)
 {
 	return pstack->top == -1;
 }
 
-// ½ºÅÃ »ğÀÔ ÇÔ¼ö
+// ìŠ¤íƒ ì‚½ì… í•¨ìˆ˜
 void push(Stack* pstack, double value)
 {//error: stack full
 	pstack->arr[++(pstack->top)] = value;
 }
 
-// ½ºÅÃ »èÁ¦ ÇÔ¼ö
+// ìŠ¤íƒ ì‚­ì œ í•¨ìˆ˜
 double pop(Stack* pstack)
 {
 	if (isEmpty(pstack))
@@ -42,25 +44,25 @@ double pop(Stack* pstack)
 }
 
 
-// ½ºÅÃ¿¡¼­ °ªÀ» ÀĞ¾î¿À´Â ÇÔ¼ö
+// ìŠ¤íƒì—ì„œ ê°’ì„ ì½ì–´ì˜¤ëŠ” í•¨ìˆ˜
 double peek(Stack* pstack)
 {
 	if (isEmpty(pstack))
 		exit(1); //error
 	return pstack->arr[pstack->top];
 }
-// prefix notation ¹®ÀÚ¿­À» °è»êÇÏ´Â ÇÔ¼ö
+// prefix notation ë¬¸ìì—´ì„ ê³„ì‚°í•˜ëŠ” í•¨ìˆ˜
 double prefix_calculate(char* exp)
 {
 	Stack stack;
 	double op1, op2;
-	int len = strlen(exp);//¹®ÀÚ¿­ÀÇ ±æÀÌ ¹İÈ¯
+	int len = strlen(exp);//ë¬¸ìì—´ì˜ ê¸¸ì´ ë°˜í™˜
 	initStack(&stack, len);
 	for (int i = len - 1; i >= 0; i--)
 	{
 		if (isdigit(exp[i]))
 		{
-			// °ø¹éÀ» °Ç³Ê¶Ú ÈÄ, µÎÀÚ¸® ÀÌ»óÀÇ ¼ıÀÚ¸¦ ÀĞ¾î¿È
+			// ê³µë°±ì„ ê±´ë„ˆë›´ í›„, ë‘ìë¦¬ ì´ìƒì˜ ìˆ«ìë¥¼ ì½ì–´ì˜´
 			double numlen = 0;
 			double num = 0;
 			while (i >= 0 && !isspace(exp[i]))
@@ -77,7 +79,7 @@ double prefix_calculate(char* exp)
 		}
 		else
 		{
-			//¼ö½Ä±âÈ£°¡ ³ª¿ÍÀ»¶§ÀÇ Á¶°Ç
+			//ìˆ˜ì‹ê¸°í˜¸ê°€ ë‚˜ì™€ì„ë•Œì˜ ì¡°ê±´
 			op2 = peek(&stack), pop(&stack);
 			op1 = peek(&stack), pop(&stack);
 			if (exp[i] == '+')
@@ -96,9 +98,9 @@ double prefix_calculate(char* exp)
 
 int main() {
 
-	// ¾Æ·¡ main ÇÔ¼ö´Â ¼öÁ¤ÇÏÁö ¸¶¼¼¿ä. 
+	// ì•„ë˜ main í•¨ìˆ˜ëŠ” ìˆ˜ì •í•˜ì§€ ë§ˆì„¸ìš”. 
 	char expression[MAX_LEN];
-	// °³Çà¹®ÀÚ¸¦ Á¦¿ÜÇÑ ¸ğµç »ç¿ëÀÚ ÀÔ·ÂÀ» ¹Ş´Â´Ù´Â ÀÇ¹ÌÀÔ´Ï´Ù.
+	// ê°œí–‰ë¬¸ìë¥¼ ì œì™¸í•œ ëª¨ë“  ì‚¬ìš©ì ì…ë ¥ì„ ë°›ëŠ”ë‹¤ëŠ” ì˜ë¯¸ì…ë‹ˆë‹¤.
 	scanf("%[^\n]", expression);
 
 	double result = prefix_calculate(expression);
