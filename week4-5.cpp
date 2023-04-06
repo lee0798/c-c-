@@ -107,6 +107,8 @@ int peekrear(dequeue* pdequeue) {
 	}
 	return pdequeue->items[pdequeue->rear - 1];
 }*/
+
+//using dequeue checking  palindrome
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
