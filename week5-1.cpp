@@ -1,5 +1,5 @@
 //General List operation
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #define MAX_LIST 100
 typedef int Data;
@@ -77,7 +77,7 @@ int main ()
 	PrintList(&li);
 
 	return 0;
-}*/
+}
 //Linked List operation
 #include <stdio.h>
 #include<stdlib.h>
