@@ -1,5 +1,5 @@
 //Circular Linked list
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 typedef int Data;
 typedef struct _Node
