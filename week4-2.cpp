@@ -1,5 +1,5 @@
 //evaluate postfix notation, converting infix to postfix
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #define MAX_STACK 100
@@ -143,5 +143,5 @@ int getpriority(char token)
 	case'+':
 	case'-':return 2;
 	}
-}*/
+}
 
