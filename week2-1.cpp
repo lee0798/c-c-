@@ -11,7 +11,7 @@ int main()
 	{
 		scanf_s("%d", &mainlist[i]);
 	}
-
+	
 
 	SelectionSort(mainlist, arraysize);
 
