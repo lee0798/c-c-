@@ -1,5 +1,5 @@
 //Stack operations
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK 100
 typedef int Data;
@@ -58,9 +58,9 @@ void Push(Stack* pstack, Data item)
 	if (IsFull(pstack))
 		exit(1); //error: stack full
 	pstack->items[++(pstack->top)] = item;
-}*/
+}
 // reverse string by using stack
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK 100
 typedef int Data;
@@ -121,9 +121,9 @@ void Push(Stack* pstack, Data item)
 	if (IsFull(pstack))
 		exit(1); //error: stack full
 	pstack->items[++(pstack->top)] = item;
-}*/
+}
 //parenthesis Matching function
-/*bool IsParanBalanced(char* exp, int len)
+bool IsParanBalanced(char* exp, int len)
 {
 	Stack stack;
 	InitStack(&stack); // Make a stack empty.
@@ -141,6 +141,6 @@ void Push(Stack* pstack, Data item)
 		return true; // Balanced case
 	else
 		return false; // Unbalanced case
-}*/
+}
 
 
