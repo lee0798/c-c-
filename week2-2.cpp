@@ -1,5 +1,5 @@
 ﻿//재귀함수
-/*#include <stdio.h>
+#include <stdio.h>
 #define size 3
 int rsum(int* list,int n);
 int main()
@@ -14,7 +14,7 @@ int rsum(int* list, int n)
 		return rsum(list, n - 1) + list[n - 1];
 	else
 		return 0;
-}*/
+}
 //목표숫자 찾기 찾기
 #include <stdio.h>
 #include <stdlib.h>
