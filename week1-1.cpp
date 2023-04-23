@@ -1,6 +1,6 @@
 ﻿
 //배열로 숫자 넣고 거꾸로 출력하기
-/*#include <stdio.h>
+#include <stdio.h>
 #define ARRAY_SIZE 5
 
 
@@ -18,9 +18,9 @@ int main()
     }
 
     return 0;
-}*/
+}
 //배열의 값의 평균 구하기
-/*#include <stdio.h>
+#include <stdio.h>
 #define ARRAY_SIZE 5
 
 void inputnumbers(int num[], int len);
@@ -49,9 +49,9 @@ double computeaverage(int num[], int len)
     }
     return tmp / len;
 
-}*/
+}
 //2차원 배열 
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     int row, col,matrix[6][6];
@@ -75,9 +75,9 @@ int main()
     }
 
     return 0;
-}*/
+}
 // 포인터 reference
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -87,9 +87,9 @@ int main()
     printf("%p %p\n", &c, &pc);
     printf("%d %d\n", sizeof(c), sizeof(pc));
     return 0;
-}*/
+}
 // 포인터 Dereference
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     char c = 'A';
@@ -98,9 +98,9 @@ int main()
     *pc = 'C';
     printf("%c %c\n", c, *pc);
     return 0;
-}*/
+}
 //call by reference
-/*#include <stdio.h>
+#include <stdio.h>
 void swap(int* a, int* b);
 int main()
 {
@@ -117,4 +117,4 @@ void swap(int* a,int* b)
     int tmp = *a;
     *a = *b;
     *b = tmp;
-}*/
+}
