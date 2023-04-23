@@ -1,5 +1,5 @@
 //Dequeue operation
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define max_dequeue 100
@@ -106,7 +106,7 @@ int peekrear(dequeue* pdequeue) {
 		exit(1);
 	}
 	return pdequeue->items[pdequeue->rear - 1];
-}*/
+}
 
 //using dequeue checking  palindrome
 #include <stdio.h>
