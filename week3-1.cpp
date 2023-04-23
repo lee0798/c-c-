@@ -1,5 +1,5 @@
 ﻿//재귀함수 
-/*#include<stdio.h>
+#include<stdio.h>
 int rsum(int n);
 int main() 
 {
@@ -21,9 +21,9 @@ int rsum(int n)
 	{
 		return rsum(n - 3) + n;
 	}
-}*/
+}
 //finding the maximum
-/*#include <stdio.h>
+#include <stdio.h>
 #define size 6
 int rfindMax(int* arr, int n);
 int main()
@@ -44,9 +44,9 @@ int rfindMax(int* arr, int n)
 		else
 			return max;
 	}
-}*/
+}
 //fibonacci numbers n번째 숫자 찾기
-/*#include<stdio.h>
+#include<stdio.h>
 int fibo(int n);
 int main()
 {
@@ -70,9 +70,9 @@ int fibo(int n)
 		}
 		return nex;
 	}
-}*/
+}
 //fibonacci numbers n번째 숫자 찾기2 재귀함수 ver
- /*int rfibo(int n)
+ int rfibo(int n)
 {
 if (n == 1 || n == 2) 
 {
@@ -81,4 +81,4 @@ if (n == 1 || n == 2)
 {
 	return rfibo(n - 1) + rfibo(n - 2);
 }
-}*/
+}
