@@ -1,5 +1,5 @@
 ﻿//이중 포인터
-/*#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -12,9 +12,9 @@ int main()
 	printf("%d\n", sizeof(ppc));
 
 	return 0;
-}*/
+}
 //array and pointer
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
 	int a[6] = { 5,3,1,2,4,6 };
@@ -25,9 +25,9 @@ int main()
 	printf("%d %d\n", a[0], pa[0]);
 	printf("%d %d\n", a[1], pa[1]);
 	return 0;
-}*/
+}
 //dynamic memory allocation
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int main()
@@ -45,9 +45,9 @@ int main()
 	}
 	free(pn);
 	return 0;
-}*/
+}
 //structure
-/*#include <stdio.h>
+#include <stdio.h>
 typedef struct
 {
 	char name[10];
@@ -63,9 +63,9 @@ int main()
 		printf("%d\n", s1.scores[i]);
 	}
 	return 0;
-}*/
+}
 // 구조체와 동적할당
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 typedef struct
 {
@@ -90,4 +90,4 @@ int main()
 	}
 	free(s);
 	return 0;
-}*/
+}
